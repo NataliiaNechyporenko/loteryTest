@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>ProgForce_JS_Test</title>
+</head>
+<body>
+  <div class="content-container">
+    <div class="winners">
+      <p class="winners__text">Winners: ...</p>
+      <button class="btn" onClick=whoWin(); type="button">New Winner</button>
+    </div>
+    <form class="registration-form" id="registration-form" method="#" onsubmit="submitHandler()">
+      <div class="input-fields-wrapper">
+      <h2 class="title">Registration form</h2>
+      <div class="input-block">
+        <label class="input-label" for="name">Name</label>
+        <input class="input" type="text" name="name" id="name" required oninput="registration.checkRegName()">
+      </div>
+      <div class="input-block">
+        <label class="input-label" for="surname">Surname</label>
+        <input class="input" type="text" name="surname" id="surname" required oninput="registration.checkRegSurname()">
+      </div>
+      <div class="input-block">
+        <label class="input-label" for="email">Email</label>
+        <input class="input" type="email" name="email" id="email" required oninput="registration.checkRegEmail()">
+      </div>
+      <div class="input-block">
+        <label class="input-label" for="phone">Phone</label>
+        <input class="input" type="tel" name="phone" id="phone" oninput="registration.checkRegPhone()">
+      </div>
+      </div>
+      <div class="error-btn-block">
+      <p class="error-message" id="error-message"></p>
+      <input id="submit" class="btn" type="submit" value="">Save</input>
+      </div>
+    </form>
+    <div class="table-information-block">
+      <table class="users-info-table">
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+  <script src="script.js"></script>
+</body>
+</html>
