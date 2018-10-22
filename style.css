@@ -28,6 +28,7 @@ html,body {
 }
 
 .winners {
+  align-items: flex-start;
   box-sizing: border-box;
   border: 1px solid #000;
   display: flex;
@@ -39,8 +40,21 @@ html,body {
   width: 100%;
 }
 
+.winners-list-wrapper {
+  padding: .5em;
+}
+
+.winners-list-wrapper ul {
+  list-style: none;
+}
+
+.winners__text {
+  margin: .5em;
+}
+
 .registration-form {
   display: block;
+  margin-bottom: 1em;
   width: 100%;
 }
 
@@ -89,4 +103,26 @@ html,body {
   color: #e7252e;
   flex: 1 2 70%;
   margin-right: 2rem;
+}
+
+.users-info-table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.info-block {
+  display: none;
+  width: 100%;
+}
+
+.info-block--show {
+  display: block;
+}
+
+.users-info-table th,
+.users-info-table td {
+  border: 1px solid #000;
+  text-align: center;
+  width: 20%;
 }

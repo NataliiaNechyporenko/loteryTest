@@ -10,22 +10,23 @@
 <body>
   <div class="content-container">
     <div class="winners">
-      <p class="winners__text">Winners: ...</p>
-      <button class="btn" onClick=whoWin(); type="button">New Winner</button>
+      <p class="winners__text">Winners:</p>
+      <div class="winners-list-wrapper" id="winners-list-wrapper"></div>
+      <button class="btn" onClick="getWinner()"; type="button">New Winner</button>
     </div>
-    <form class="registration-form" id="registration-form" method="#" onsubmit="submitHandler()">
+    <form class="registration-form" id="registration-form" method="#">
       <div class="input-fields-wrapper">
       <h2 class="title">Registration form</h2>
       <div class="input-block">
-        <label class="input-label" for="name">Name</label>
+        <label class="input-label" for="name">Name*</label>
         <input class="input" type="text" name="name" id="name" required oninput="registration.checkRegName()">
       </div>
       <div class="input-block">
-        <label class="input-label" for="surname">Surname</label>
+        <label class="input-label" for="surname">Surname*</label>
         <input class="input" type="text" name="surname" id="surname" required oninput="registration.checkRegSurname()">
       </div>
       <div class="input-block">
-        <label class="input-label" for="email">Email</label>
+        <label class="input-label" for="email">Email*</label>
         <input class="input" type="email" name="email" id="email" required oninput="registration.checkRegEmail()">
       </div>
       <div class="input-block">
@@ -34,11 +35,11 @@
       </div>
       </div>
       <div class="error-btn-block">
-      <p class="error-message" id="error-message"></p>
-      <input id="submit" class="btn" type="submit" value="">Save</input>
+      <p class="error-message" id="error-message">* - Requaired fields</p>
+      <input id="submit" class="btn" type="submit" value="Save"></input>
       </div>
     </form>
-    <div class="table-information-block">
+    <div class="info-block" id="info-block">
       <table class="users-info-table">
         <tbody>
           <tr>
@@ -48,13 +49,7 @@
             <th>Phone</th>
           </tr>
         </tbody>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        <tbody id="table-info-body">
         </tbody>
       </table>
     </div>
